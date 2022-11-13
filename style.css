@@ -11,6 +11,7 @@
     --cor-backjs:#83710a;
     --cor-backcss:#184686;
     --cor-backreact:#146d91;
+    --cor-gradiente:linear-gradient(281.44deg, #30C4F3 -1.03%, #CB35AA 44.86%);
 }
 ::-webkit-scrollbar {
     width:.5rem;
@@ -56,10 +57,11 @@ nav a{
     line-height: 1rem;
 }
 #cedraz{
-    background: linear-gradient(281.44deg, #30C4F3 -1.03%, #CB35AA 44.86%);
+    background: var(--cor-gradiente);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    font-size: inherit;
 }
 #backgroundPI{
     height: 100%;
@@ -81,9 +83,12 @@ nav a{
     width: 100%;
     justify-content: center;
     margin:2rem 0;
-
+    stroke:var(--cor-secundaria);
 }
-section:nth-child(2n) #setaArrasta path{
+body section:nth-child(2n) #setaArrasta path{
+    stroke: var(--cor-secundaria);
+}
+section:nth-child(n) #setaArrasta path{
     stroke: var(--cor-principal);
 }
 #sobre{
@@ -413,4 +418,39 @@ section:nth-child(2n) #setaArrasta path{
 }
 #formulario > input{
     height: 4rem;
+}
+
+
+
+
+@media (max-width: 670px){ /*Celular*/
+    #paginaInicial{
+        background-color: var(--cor-principal);
+    }
+    #backgroundPI{
+        display: none;
+    }    
+    nav{
+        display: none;
+    }
+    header{
+        justify-content: center;
+    }
+    #miscBack{
+        width: 100vw;
+        height: 5%;
+        background: linear-gradient(98.38deg, #2C56FF 0.79%, #9D34C3 69.4%), #D9D9D9;
+        position:absolute;
+        z-index: 0;
+    }
+    #logoNav{
+        z-index: 2;
+    }
+    #apresentacao{
+        font-size: 1.2rem;
+        margin:0 10vw;
+    }
+    body h1{
+        font-size:2.8rem;
+    }
 }

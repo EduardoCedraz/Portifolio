@@ -1,0 +1,9 @@
+@media (min-width: 390px){ /*Celular*/
+    #backgroundPI{
+        background-color: var(--cor-principal);
+    }    
+
+
+
+
+}
