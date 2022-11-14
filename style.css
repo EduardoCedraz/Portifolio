@@ -48,12 +48,13 @@ section:not(#paginaInicial){
 }
 nav a{
     color: #fdfdfd;
-    margin-right: 1.5rem;
+    margin-right: 1rem;
     font-weight: 500;
+    font-size: 1.2rem;
 }
 #logoNav{
-    width: 100px;
-    margin-left: 2.5rem;
+    width: 6rem;
+    margin-left: 2.7rem;
 }
 #apresentacao{
     color: #fdfdfd;
@@ -133,23 +134,24 @@ section:nth-child(n) #setaArrasta path{
     line-height: 2.4rem;
     text-align: justify;
 }
+
+
 #lgSocial{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     width: 35%;
-    gap:1rem
+    gap:3rem
 }
 .logoSobre{
-    width: 70%;
+    width: 13rem;
 }
 .social:last-child{
     margin:0;
 }
 #linkSocial{
     font-size: 4.5rem;
-    margin-top: 3rem;
     display: flex;
     gap: 1.5rem;
 }
@@ -432,8 +434,23 @@ section#contato{
     padding: 2rem;
 }
 
-
-@media (max-width: 821px){ /*Celular*/
+@media (min-width:2560px) {
+    :root{
+        font-size: 26px;
+    }
+    nav{
+        background:  linear-gradient(288.18deg, rgba(48, 126, 243, 0.52) 33.15%, rgba(163, 53, 203, 0.52) 72.92%);
+        padding: 2rem 2rem 1rem 2rem;
+        border-radius: 0px 0px 0px 50px;
+    }
+    header{
+        padding: 0;
+    }
+    #retangulo{
+        display: none;
+    }
+}
+@media (max-width: 880px){ /*Tablet*/
     #paginaInicial{
         background-color: var(--cor-principal);
     }
@@ -455,7 +472,6 @@ section#contato{
     }
     #logoNav{
         z-index: 2;
-        margin:0;
     }
     #apresentacao{
         font-size: 1.3rem;
@@ -525,7 +541,7 @@ section#contato{
     }
     
 }
-@media (max-width:497px ){
+@media (max-width:472px ){
     :root{
         font-size: 14px;
     }
@@ -541,5 +557,10 @@ section#contato{
         grid-template-columns: 100%;
         grid-template-rows: auto;
         margin: 0;
+    }
+}
+@media (min-width:630px){
+    #apresentacao h1 {
+        font-size: 4rem;
     }
 }
